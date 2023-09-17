@@ -1,3 +1,5 @@
+This project utilizes the following superstore data:
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -24,3 +26,17 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+Uses a select statement to order the items by price.
+SELECT item_name, price
+FROM superstore
+ORDER BY price desc;
+
+Shows a statistic about items prices.
+SELECT SUM(price)
+FROM superstore
+
+Shows a statistic about the price for items in the category of "Kitchen Supplies".
+SELECT SUM(price)
+FROM superstore
+WHERE category="Kitchen Supplies"
