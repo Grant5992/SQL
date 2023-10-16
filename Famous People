@@ -1,0 +1,31 @@
+This project consists of making a table with sets of "famous people".  You will also have to construct more tables 
+that focus on aspects of each individual famous person.  This is accomplished by creating a join.
+CREATE TABLE athletes (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT,
+age INTEGER,
+nationality TEXT);
+
+Insert into athletes (fullname, age, nationality) VALUES ("Tiger Woods", 47, "US");
+Insert into athletes (fullname, age, nationality) VALUES ("Michael Jordan", 60,"US");
+Insert into athletes (fullname, age, nationality) Values ("Christiano Ronaldo", 38, "Portuguese");
+Insert into athletes (fullname, age, nationality) Values ("Tom Brady", 46, "US");
+Insert into athletes (fullname, age, nationality) Values ("Mike Tyson", 57, "US")
+
+Create table sport (
+id integer primary key autoincrement 
+athlete_id Integer,
+nationality Text,
+Salary Text,
+
+INSERT INTO sport (athlete_id,nationality,salary) VALUES (1, "American", "50 million");
+INSERT INTO sport (athlete_id,nationality,salary) VALUES (2, "American", "45 million");
+INSERT INTO sport (athlete_id,nationality,salary) VALUES (3, "Portuguese", "35 million");
+INSERT INTO sport (athlete_id,nationality,salary  VALUES (4, "American", "25 million");
+INSERT INTO sport (athlete_id,nationality,salary) VALUES (5, "American", "12 million");
+
+/*Return total salary for each athlete
+SELECT athletes.fullname,sport.salary
+FROM athletes 
+JOIN sport 
+ON athletes.id = sport.athlete id;
